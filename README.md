@@ -19,7 +19,7 @@ npm start
 ```
 
 ### Ejecutar back
-´´´
+```
 npm start
 ```
 
