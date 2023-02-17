@@ -3,6 +3,7 @@ const express = require('express')
 const morgan = require('morgan')
 const cors = require('cors')
 const app = express()
+app.use(express.static('build'))
 app.use(express.json())
 app.use(cors())
 app.use(morgan((tokens, req, res) => {
@@ -110,7 +111,17 @@ app.get("/info", (request, response) => {
     response.send(string)
 })
 
-const PORT = 3001
+app.get(["/", "/:name"], (req, res) => {
+  greeting = "<h1>Hello From Node on Fly!</h1>";
+  name = req.params["name"];
+  if (name) {
+    res.send(greeting + "</br>and hello to " + name);
+  } else {
+    res.send(greeting);
+  }
+});
+
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
 })

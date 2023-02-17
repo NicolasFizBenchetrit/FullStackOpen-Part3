@@ -1,7 +1,7 @@
 {
-  "name": "phonebook",
+  "name": "pruebanotas",
   "version": "1.0.0",
-  "description": "phonebook back",
+  "description": "pruebanotas back",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
@@ -11,6 +11,7 @@
   "author": "Nico",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "morgan": "^1.10.0"
   },
