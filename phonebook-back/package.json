@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:ui": "rd /S /Q build && cd ../phonebook-front/ && npm run build && xcopy /E /I build ..\\phonebook-back\\build",
+    "build:ui": "rm -rf build && cd ../phonebook-front/ && npm run build && cp build ../phonebook-back/build",
     "deploy": "flyctl deploy",
     "deploy:full": "npm run build:ui && npm run deploy",
     "logs:prod": "flyctl logs",
@@ -17,7 +17,9 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "mongoose": "^6.9.2",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
