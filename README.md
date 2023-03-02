@@ -1,34 +1,34 @@
 # Part3
  
-Esta es la parte 3 del bootcamp FullStackOpen
+This is my part 3 of the full stack open bootcamp
 
 ## Comandos
 
-Para instalar los paquetes necesarios ejecutar 
+Install needed packages
 ```
 npm i
 ````
 
-El resto de comandos se encuentran dentro de **package.json**
+Scripts to execute inside **package.json**
 
-Los más importantes serían: 
+Most important ones: 
 
-### Ejecutar front
+### Execute front
 ```
 npm start
 ```
 
-### Ejecutar back
+### Execute back
 ```
 npm start
 ```
 
-### Ejecutar back en modo *Dev*
+### Execute back *Dev*
 ```
 npm run dev
 ```
 
-### Hacer deploy de la app
+### Deploy app on fly.io
 ```
 npm deploy full
 ```
